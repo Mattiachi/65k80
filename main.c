@@ -2,9 +2,17 @@
  * Date:    March 2023
  * Version: v1.0. 
  * 
- * MPLAB X IDE v3.40
- * XC8 v1.38 PRO
- * MCU: PIC18LF65K80
+ * IDE:         MPLAB X IDE v3.40 (native)
+ *              MPLAB X IDE v3.55 (compatible as well)
+ * 
+ * COMPILER:    XC8 v1.38 PRO  (native)
+ *              XC8 v1.41 PRO (compatible as well)
+ * 
+ * MCU: PIC18LF65K80    Current in deep sleep as low as 13nA @1.8V Vdd
+ * 
+ * Watch Out: Due to limited program memory (only 32KB) it is necessary to 
+ * compile the program with a PRO version of XC8! 
+ * 
  * 
  * Description:
  * The led is lit until the Radio module Olimex is not configured properly.
