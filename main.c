@@ -42,8 +42,8 @@
  *  RD3 (59) -> NSS
  *  
  *  RC3 (51) -> SCK
- *  RC5 (62) -> SDI or MISO
- *  RC4 (63) -> SDO or MOSI
+ *  RC4 (62) -> SDI or MISO
+ *  RC5 (63) -> SDO or MOSI
 */
 
 #include "mcc_generated_files/mcc.h"
