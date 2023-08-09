@@ -47,7 +47,9 @@
 */
 
 #include "mcc_generated_files/mcc.h"
-//#include <stdio.h>      // To use printf in EUSART1
+#define myLED_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
+#define myLED_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
+#define myLED_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
 
 // my functions
 void sendPacket(void);
@@ -70,8 +72,7 @@ void main(void)
 {
     // Initialize the device
     SYSTEM_Initialize();
-    
-    //printf("System Initialized");   // Baud Rate 300
+    TRISCbits.TRISC7 = 0; // Setting the pin C7 as output
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
     myLED_SetHigh();                // Custom function written by MCC
